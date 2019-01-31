@@ -17,17 +17,9 @@ Route::get('/', function () {
 
 Route::prefix('admin')->group(function(){
 	Route::get('/', function(){
-		return view('admin.main');
-	})->name('admin.main');
+		return view('admin.pages.dashboard');
+	})->name('admin.home');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
